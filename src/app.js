@@ -17,4 +17,13 @@ app.use(express.static("public"))  //To store assets(images,favicon,etc) in our 
 
 app.use(cookieParser())  //To perform crud operations on cookies on client's browser
 
+//Routes import 
+
+import userRouter from "./routes/user.routes.js"
+
+
+//Routes Declaration
+app.use("/api/v1/users",userRouter);
+
+
 export {app};
